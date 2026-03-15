@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton System - Architecture of Yoga</title>
+    <!-- Modern Beautiful Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-content">
+            <h2 class="school-name">Manali Yogashala</h2>
+            <p class="course-name">Architecture of Yoga</p>
+            <h1 class="main-title">The Human Skeleton</h1>
+            <p class="subtitle">A master reference of the 206 bones, naming roots, and derivations.</p>
+        </div>
+        
+        <div class="stats-overview">
+            <div class="stat-box gradient-1">
+                <span class="stat-val" id="total-bones">--</span>
+                <span class="stat-label">Total Bones</span>
+            </div>
+            <div class="stat-box gradient-2">
+                <span class="stat-val" id="axial-bones">--</span>
+                <span class="stat-label">Axial Skeleton</span>
+            </div>
+            <div class="stat-box gradient-3">
+                <span class="stat-val" id="appendicular-bones">--</span>
+                <span class="stat-label">Appendicular Skeleton</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="section">
+            <div class="section-header">
+                <h2>The Naming Matrix</h2>
+                <p>Understanding the prefixes and suffixes makes the skeleton simple.</p>
+            </div>
+            <div class="table-responsive">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Affix</th>
+                            <th>Term</th>
+                            <th>Meaning</th>
+                            <th>Count</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrix-body">
+                        <!-- Rendered by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bottom-split">
+            <div class="left-col">
+                <section class="section">
+                    <div class="section-header">
+                        <h2>Regional Breakdown</h2>
+                    </div>
+                    <div id="category-breakdown" class="breakdown-list">
+                        <!-- Rendered by app.js -->
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-col">
+                <section class="section">
+                    <div class="section-header">
+                        <h2>The 206 Bones Reference</h2>
+                    </div>
+                    <div id="bones-grid" class="bones-grid">
+                        <!-- Rendered by app.js -->
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Manali Yogashala &bull; Architecture of Yoga Course Material</p>
+    </footer>
+
+    <!-- Modal for Zooming/Focusing on a Bone -->
+    <div id="bone-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div id="modal-visual" class="modal-visual-container"></div>
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <div class="modal-tags" id="modal-tags"></div>
+                <p id="modal-desc" class="modal-desc"></p>
+                <a id="modal-wiki-link" href="#" target="_blank" class="wiki-link">Read more on Wikipedia &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Type Module for imports -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
