@@ -269,7 +269,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Carpal",
-        "imageUrl": null
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lunate_bone_%28left_hand%29_01_palmar_view.png/330px-Lunate_bone_%28left_hand%29_01_palmar_view.png"
     },
     {
         "name": "Triquetrum",
@@ -277,7 +277,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Carpal",
-        "imageUrl": null
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Triangular_bone_%28left_hand%29_01_palmar_view.png/330px-Triangular_bone_%28left_hand%29_01_palmar_view.png"
     },
     {
         "name": "Pisiform",
@@ -293,7 +293,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Carpal",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Trapezium-trapezoid-comparisons.png/330px-Trapezium-trapezoid-comparisons.png"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Trapezium_bone_%28left%2901_palmar_view.png/330px-Trapezium_bone_%28left%2901_palmar_view.png"
     },
     {
         "name": "Trapezoid",
@@ -301,7 +301,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Carpal",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Trapezoid.svg/330px-Trapezoid.svg.png"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Trapezoid_bone_%28left_hand%29_01_palmar_view.png/330px-Trapezoid_bone_%28left_hand%29_01_palmar_view.png"
     },
     {
         "name": "Capitate",
@@ -397,7 +397,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Tarsal",
-        "imageUrl": null
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Subtalar_Joint.PNG/330px-Subtalar_Joint.PNG"
     },
     {
         "name": "Calcaneus",
@@ -445,7 +445,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Tarsal",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Generic_quadrilateral_hexahedron.svg/330px-Generic_quadrilateral_hexahedron.svg.png"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gray274.png/330px-Gray274.png"
     },
     {
         "name": "Metatarsal bone",
