@@ -245,7 +245,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 2,
         "text": "Lateral forearm bone (thumb side)",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Circle-withsegments.svg/330px-Circle-withsegments.svg.png"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Radius_-_anterior_view2.png/330px-Radius_-_anterior_view2.png"
     },
     {
         "name": "Ulna",
@@ -333,7 +333,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 10,
         "text": "First segment of fingers",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/330px-Scheme_human_hand_bones-en.svg.png"
+        "imageUrl": null
     },
     {
         "name": "Middle phalanx (hand)",
@@ -349,7 +349,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 10,
         "text": "Tip segment of fingers",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/330px-Scheme_human_hand_bones-en.svg.png"
+        "imageUrl": null
     },
     {
         "name": "Os coxae",
@@ -461,7 +461,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 10,
         "text": "First segment of toes",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/330px-Scheme_human_hand_bones-en.svg.png"
+        "imageUrl": null
     },
     {
         "name": "Middle phalanx (foot)",
@@ -477,7 +477,7 @@ const bonesData = [
         "region": "Appendicular",
         "count": 10,
         "text": "Tip segment of toes",
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Scheme_human_hand_bones-en.svg/330px-Scheme_human_hand_bones-en.svg.png"
+        "imageUrl": null
     }
 ];
 

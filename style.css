@@ -585,11 +585,6 @@ h1, h2, h3, h4 {
     object-fit: contain;
 }
 
-.modal-visual-container model-viewer {
-    width: 100%;
-    height: 350px;
-    background-color: transparent;
-}
 
 .modal-info {
     padding: 3rem 2rem;
@@ -617,21 +612,67 @@ h1, h2, h3, h4 {
     line-height: 1.8;
 }
 
-.wiki-link {
-    display: inline-block;
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.8rem 1.5rem;
-    background: var(--primary);
-    color: var(--white);
-    text-decoration: none;
     border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background 0.2s, transform 0.2s;
-    text-align: center;
-    align-self: flex-start;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
 }
 
-.wiki-link:hover {
+.action-btn.wiki {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.action-btn.wiki:hover {
     background: var(--text-main);
     transform: translateY(-2px);
+}
+
+.action-btn.google {
+    background: #4285F4;
+    color: white;
+}
+
+.action-btn.google:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+}
+
+.action-btn.chatgpt {
+    background: #10a37f;
+    color: white;
+}
+
+.action-btn.chatgpt:hover {
+    background: #0d8a6a;
+    transform: translateY(-2px);
+}
+
+.no-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border-radius: var(--radius-sm);
 }

@@ -86,13 +86,7 @@ function renderBonesList(filterCategory = null) {
         
         const visualContent = bone.imageUrl 
             ? `<img src="${bone.imageUrl}" alt="${bone.name}" class="bone-image" />`
-            : `<model-viewer 
-                    src="skeleton.glb" 
-                    alt="A 3D model of a bone" 
-                    auto-rotate 
-                    camera-controls 
-                    style="width: 100%; height: 200px; background-color: transparent;">
-                </model-viewer>`;
+            : `<div class="no-image-placeholder">No Image Available</div>`;
 
         card.innerHTML = `
             <div class="bone-visual-placeholder">
@@ -202,14 +196,34 @@ function setupModal() {
             <span class="tag" style="background:#333;color:white;">Total: ${bone.count}</span>
         `;
         
-        let wikiSearchWord = bone.name.replace(' (hand)', '').replace(' (foot)', '');
-        document.getElementById('modal-wiki-link').href = `https://en.wikipedia.org/wiki/${encodeURIComponent(wikiSearchWord)}`;
+        const wikiOverrides = {
+            "Radius": "Radius_(bone)",
+            "Cuboid": "Cuboid_bone",
+            "Proximal phalanx (hand)": "Proximal_phalanges_of_the_hand",
+            "Middle phalanx (hand)": "Intermediate_phalanges_of_the_hand",
+            "Distal phalanx (hand)": "Distal_phalanges_of_the_hand",
+            "Proximal phalanx (foot)": "Proximal_phalanges_of_the_foot",
+            "Middle phalanx (foot)": "Intermediate_phalanges_of_the_foot",
+            "Distal phalanx (foot)": "Distal_phalanges_of_the_foot"
+        };
+        
+        let wikiSearchWord = wikiOverrides[bone.name] || bone.name.replace(' (hand)', '').replace(' (foot)', '');
+        const encodedWord = encodeURIComponent(wikiSearchWord);
+        
+        let actionsHTML = '';
+        if (bone.imageUrl) {
+            actionsHTML += `<a href="https://en.wikipedia.org/wiki/${encodedWord}" target="_blank" class="action-btn wiki">Read on Wikipedia &rarr;</a>`;
+        } else {
+            actionsHTML += `<a href="https://www.google.com/search?tbm=isch&q=${encodedWord}+bone+anatomy" target="_blank" class="action-btn google">Search on Google</a>`;
+            actionsHTML += `<a href="https://chatgpt.com/?q=Tell+me+about+the+${encodedWord}+bone+in+human+anatomy" target="_blank" class="action-btn chatgpt">Ask ChatGPT</a>`;
+        }
+        document.getElementById('modal-actions').innerHTML = actionsHTML;
 
         const visualContainer = document.getElementById('modal-visual');
         if (bone.imageUrl) {
             visualContainer.innerHTML = `<img src="${bone.imageUrl}" alt="${bone.name}" />`;
         } else {
-            visualContainer.innerHTML = `<model-viewer src="skeleton.glb" auto-rotate camera-controls exposure="1.2" shadow-intensity="1"></model-viewer>`;
+            visualContainer.innerHTML = `<div class="no-image-placeholder" style="height: 100%; font-size: 1.5rem; text-align: center; padding: 2rem;">Cannot link accurate Wikipedia image for<br><br><span style="color:var(--primary)">${bone.name}</span></div>`;
         }
 
         // Show Modal
